@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2252771045469274716}
   - component: {fileID: 3538312093636680622}
   m_Layer: 0
-  m_Name: Fireplace
+  m_Name: Fireplace-Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
