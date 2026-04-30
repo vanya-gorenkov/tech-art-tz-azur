@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 384738727
   m_SortingLayer: -2
-  m_SortingOrder: -1
+  m_SortingOrder: -999
   m_Sprite: {fileID: 21300000, guid: 9bbe239bc0cf8f34faa4171f7da8c3f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7108128978635544641}
   - component: {fileID: 3857327102840630786}
+  - component: {fileID: 6194222252105083185}
   m_Layer: 0
   m_Name: door1_arch
   m_TagString: Untagged
@@ -199,9 +200,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6800619de8a6690499974293b76761fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -213,6 +214,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &6194222252105083185
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728509315271044716}
+  m_Enabled: 1
+  m_SortingLayerID: 384738727
+  m_SortingLayer: -2
+  m_SortingOrder: 0
 --- !u!1 &4076074437955906617
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,9 +295,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 5
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 8228baed6a6ae45418a2759f978eb1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -307,6 +319,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4275224125284470468}
   - component: {fileID: 5856229828182830414}
+  - component: {fileID: 3968533989971121371}
+  - component: {fileID: 2056310234773207029}
   m_Layer: 0
   m_Name: barrels (2)
   m_TagString: Untagged
@@ -367,8 +381,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2142090967
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95810b471d8494b4db73e981b7e56df2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -381,6 +395,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &3968533989971121371
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4365926783679517858}
+  m_Enabled: 1
+  m_SortingLayerID: 2142090967
+  m_SortingLayer: 1
+  m_SortingOrder: -1113
+--- !u!114 &2056310234773207029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4365926783679517858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a14d20c19ed6c429303e51a8cb1a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {x: 0, y: -0.57}
+  height: 0
 --- !u!1 &4595996621987282712
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3899349186719285144}
   - component: {fileID: 305513473492534210}
+  - component: {fileID: 5108218114325836291}
   m_Layer: 0
   m_Name: door3_arch
   m_TagString: Untagged
@@ -453,9 +493,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4e82e5a5cfb565249bdbc004a57c61ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -467,6 +507,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &5108218114325836291
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595996621987282712}
+  m_Enabled: 1
+  m_SortingLayerID: 384738727
+  m_SortingLayer: -2
+  m_SortingOrder: 0
 --- !u!1 &5518270503613905013
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,9 +588,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 15
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 66226573d07216d4c972ae9da1b92ef5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -645,6 +696,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2234674579024258511}
   - component: {fileID: 5985263928684866462}
+  - component: {fileID: 3167221482116471561}
+  - component: {fileID: 821063304816644422}
   m_Layer: 0
   m_Name: barrels (1)
   m_TagString: Untagged
@@ -705,8 +758,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2142090967
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95810b471d8494b4db73e981b7e56df2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -719,6 +772,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &3167221482116471561
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468225158226228391}
+  m_Enabled: 1
+  m_SortingLayerID: 2142090967
+  m_SortingLayer: 1
+  m_SortingOrder: -422
+--- !u!114 &821063304816644422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468225158226228391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a14d20c19ed6c429303e51a8cb1a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {x: 0, y: -0.57}
+  height: 0
 --- !u!1 &7498194052419443667
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,9 +867,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 5
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 8228baed6a6ae45418a2759f978eb1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -873,9 +951,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 15
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 66226573d07216d4c972ae9da1b92ef5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -957,9 +1035,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 15
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 66226573d07216d4c972ae9da1b92ef5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1041,9 +1119,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 5
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 8228baed6a6ae45418a2759f978eb1ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1065,6 +1143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097041092991415250}
   - component: {fileID: 2033113618659769705}
+  - component: {fileID: 4556485926776692200}
   m_Layer: 0
   m_Name: door2_arch
   m_TagString: Untagged
@@ -1127,9 +1206,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 384738727
-  m_SortingLayer: -2
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae38e8fa0cef114418dd189f91c07f5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1141,6 +1220,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &4556485926776692200
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229107551429567221}
+  m_Enabled: 1
+  m_SortingLayerID: 384738727
+  m_SortingLayer: -2
+  m_SortingOrder: 0
 --- !u!1 &8248513149685637340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1241,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8713223661088696025}
   - component: {fileID: 8732018692607390469}
+  - component: {fileID: 2008257045391582634}
+  - component: {fileID: 7382924347072972596}
   m_Layer: 0
   m_Name: barrels
   m_TagString: Untagged
@@ -1211,8 +1303,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2142090967
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95810b471d8494b4db73e981b7e56df2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1225,6 +1317,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2008257045391582634
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248513149685637340}
+  m_Enabled: 1
+  m_SortingLayerID: 2142090967
+  m_SortingLayer: 1
+  m_SortingOrder: 938
+--- !u!114 &7382924347072972596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248513149685637340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a14d20c19ed6c429303e51a8cb1a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {x: 0, y: -0.57}
+  height: 0
 --- !u!1001 &203541403802159097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,6 +1352,10 @@ PrefabInstance:
     - target: {fileID: 1022476098734306438, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
       propertyPath: m_Name
       value: Fireplace (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252771045469274716, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -116
       objectReference: {fileID: 0}
     - target: {fileID: 3546066984152748599, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
       propertyPath: m_RootOrder
@@ -1298,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireplace (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2252771045469274716, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -179
+      objectReference: {fileID: 0}
     - target: {fileID: 3546066984152748599, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1359,6 +1484,10 @@ PrefabInstance:
     - target: {fileID: 1022476098734306438, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
       propertyPath: m_Name
       value: Fireplace (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252771045469274716, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1374
       objectReference: {fileID: 0}
     - target: {fileID: 3546066984152748599, guid: a3d4093d0be379d439449a0228ac05a2, type: 3}
       propertyPath: m_RootOrder

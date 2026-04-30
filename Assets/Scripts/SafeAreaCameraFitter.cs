@@ -12,18 +12,14 @@ public class SafeAreaCameraFitter : MonoBehaviour
     [SerializeField]
     private bool drawGizmos = true;
 
-    [SerializeField]
-    private Camera camera;
+    private Camera _camera;
 
     private int _lastScreenWidth;
     private int _lastScreenHeight;
 
     private void OnEnable()
     {
-        if (camera == null)
-        {
-            camera = GetComponent<Camera>();
-        }
+        _camera = GetComponent<Camera>();
         Apply();
     }
 
@@ -41,11 +37,11 @@ public class SafeAreaCameraFitter : MonoBehaviour
 
     private void Apply()
     {
-        if (camera == null)
+        if (_camera == null)
         {
-            camera = GetComponent<Camera>();
+            _camera = GetComponent<Camera>();
         }
-        if (!camera.orthographic)
+        if (!_camera.orthographic)
         {
             return;
         }
@@ -60,9 +56,9 @@ public class SafeAreaCameraFitter : MonoBehaviour
 
         var targetSize = Mathf.Max(sizeByHeight, sizeByWidth);
 
-        if (!Mathf.Approximately(camera.orthographicSize, targetSize))
+        if (!Mathf.Approximately(_camera.orthographicSize, targetSize))
         {
-            camera.orthographicSize = targetSize;
+            _camera.orthographicSize = targetSize;
         }
     }
 

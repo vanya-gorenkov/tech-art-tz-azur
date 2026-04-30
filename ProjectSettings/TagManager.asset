@@ -41,7 +41,7 @@ TagManager:
   - name: Background
     uniqueID: 2170819661
     locked: 0
-  - name: Location
+  - name: LocationBackground
     uniqueID: 384738727
     locked: 0
   - name: Shadows
