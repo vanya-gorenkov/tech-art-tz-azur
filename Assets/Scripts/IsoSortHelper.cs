@@ -31,10 +31,10 @@ public class IsoSortHelper : MonoBehaviour
 
     private void Update()
     {
-        if (Application.isPlaying)
+        /*if (Application.isPlaying)
         {
             return;
-        }
+        }*/
 
         UpdateSorting();
     }

@@ -27,7 +27,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7220946206919256899}
   m_Father: {fileID: 1421272271941112298}
@@ -147,7 +147,6 @@ MonoBehaviour:
   pivot: {x: 0, y: 0}
   height: 2.68
   syncZ: 1
-  zStep: 0.01
 --- !u!95 &4728406421931245898
 Animator:
   serializedVersion: 5
