@@ -77,7 +77,6 @@ MonoBehaviour:
   pivot: {x: 0, y: 0}
   height: 0
   syncZ: 1
-  zStep: 0.01
 --- !u!1 &3051532788279776124
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,9 +441,17 @@ PrefabInstance:
       value: Orc
       objectReference: {fileID: 0}
     - target: {fileID: 3798214047891171059, guid: 6e613e0cc8579a04fa87137359377cc0, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798214047891171059, guid: 6e613e0cc8579a04fa87137359377cc0, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798214047891171059, guid: 6e613e0cc8579a04fa87137359377cc0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: db06f76db5284874a843e1256c6c03a0, type: 2}
+      objectReference: {fileID: 2100000, guid: 058a7bf732c7d6e48abe0e3570bbd94b, type: 2}
     - target: {fileID: 5866666021909216657, guid: 6e613e0cc8579a04fa87137359377cc0, type: 3}
       propertyPath: m_Controller
       value: 
