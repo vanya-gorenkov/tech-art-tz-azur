@@ -43,5 +43,5 @@ Material:
     - _Tiling: 2
     m_Colors:
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.5050285, g: 0.9150943, b: 0.74932307, a: 1}
+    - _Tint: {r: 0.5233507, g: 1, b: 0.3726415, a: 1}
   m_BuildTextureStacks: []
