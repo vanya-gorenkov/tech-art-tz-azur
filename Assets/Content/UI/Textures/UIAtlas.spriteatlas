@@ -44,9 +44,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5ad12499c68e0db4cafe4988fc49c325, type: 3}
   - {fileID: 21300000, guid: 710a2c4bdd8f6e142942bcc6481fd528, type: 3}
   m_PackedSpriteNamesToIndex:
-  - heart
+  - Heart
   - Hand
-  - coin
+  - Coin
   m_RenderDataMap: {}
   m_Tag: UIAtlas
   m_IsVariant: 0
