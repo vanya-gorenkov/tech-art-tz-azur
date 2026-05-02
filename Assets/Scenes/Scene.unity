@@ -2254,7 +2254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1093836141649406441, guid: 0f459f1bee32d6043bc60e6aa51627ab, type: 3}
       propertyPath: m_SortingOrder
-      value: 112
+      value: 1604
       objectReference: {fileID: 0}
     - target: {fileID: 1289286522430983875, guid: 0f459f1bee32d6043bc60e6aa51627ab, type: 3}
       propertyPath: m_Name
@@ -2266,15 +2266,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 0f459f1bee32d6043bc60e6aa51627ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.74
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 0f459f1bee32d6043bc60e6aa51627ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.12
+      value: -9.99
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 0f459f1bee32d6043bc60e6aa51627ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.88
+      value: -4.99
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 0f459f1bee32d6043bc60e6aa51627ab, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2415,7 +2415,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 50
+  far clip plane: 60
   field of view: 60
   orthographic: 1
   orthographic size: 17.777779
@@ -2442,7 +2442,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974747547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6445,26 +6445,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 203541403690718966, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541403765143978, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541403766834342, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541403908647318, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541403942692891, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 203541405075124858, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6512,18 +6492,6 @@ PrefabInstance:
     - target: {fileID: 203541405075124859, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
       propertyPath: m_Name
       value: Environment
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541405432345104, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541405596817285, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 203541405608230649, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e71bd9dbf3e5247937f2ed74d0c300, type: 3}
