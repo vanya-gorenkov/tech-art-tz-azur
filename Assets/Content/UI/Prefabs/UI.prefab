@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifeCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 5357716745875864230, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
+      propertyPath: m_text
+      value: 9999
+      objectReference: {fileID: 0}
     - target: {fileID: 7632107973333614657, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -627,14 +631,6 @@ PrefabInstance:
     - target: {fileID: 7632107973333614657, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632107973333614657, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632107973333614657, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7632107973333614657, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,6 +701,14 @@ PrefabInstance:
     - target: {fileID: 2494403657852463596, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
       propertyPath: m_Name
       value: CoinCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357716745875864230, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
+      propertyPath: m_text
+      value: 8888
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357716745875864230, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 7632107973333614657, guid: 778be955dec939041b3b277fbdca97ea, type: 3}
       propertyPath: m_Pivot.x
