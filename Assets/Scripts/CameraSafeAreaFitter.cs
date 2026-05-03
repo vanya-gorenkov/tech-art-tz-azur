@@ -2,7 +2,7 @@ using UnityEngine;
 
 [ExecuteAlways]
 [RequireComponent(typeof(Camera))]
-public class SafeAreaCameraFitter : MonoBehaviour
+public class CameraSafeAreaFitter : MonoBehaviour
 {
     [SerializeField]
     private float visibleWidth = 9f;
