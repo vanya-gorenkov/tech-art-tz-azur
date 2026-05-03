@@ -38,10 +38,10 @@ Material:
     - _FresnelPower: 1
     - _SpecIntensity: 0.881
     - _SpecPower: 5
-    - _Speed: 0.05
-    - _Strength: 0.01
+    - _Speed: 0.04
+    - _Strength: 0.02
     - _Tiling: 2
     m_Colors:
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.5233507, g: 1, b: 0.3726415, a: 1}
+    - _Tint: {r: 0.5683072, g: 0.9339623, b: 0.75047255, a: 1}
   m_BuildTextureStacks: []

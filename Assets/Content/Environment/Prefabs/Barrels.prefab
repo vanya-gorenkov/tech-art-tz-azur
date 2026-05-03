@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8904011130369549530}
   - component: {fileID: 8904011130369549528}
   - component: {fileID: 8904011130369549531}
+  - component: {fileID: 5850401414791380938}
   m_Layer: 0
   m_Name: Barrels
   m_TagString: Untagged
@@ -67,8 +68,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8904011130369549532}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2142090967
+  m_SortingLayer: 1
   m_SortingOrder: -976
 --- !u!114 &8904011130369549531
 MonoBehaviour:
@@ -85,6 +86,20 @@ MonoBehaviour:
   pivot: {x: 0, y: -0.7}
   height: 0
   syncZ: 1
+--- !u!114 &5850401414791380938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8904011130369549532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33353bd287ff29d40833c7d93e7ffca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationStateName: Explode
+  animator: {fileID: 8904011130369549530}
 --- !u!1 &8904011130436831174
 GameObject:
   m_ObjectHideFlags: 0
