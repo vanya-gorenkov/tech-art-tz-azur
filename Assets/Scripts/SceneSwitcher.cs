@@ -8,18 +8,7 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField]
     private string sceneB;
 
-    [SerializeField]
-    private KeyCode switchKey = KeyCode.Space;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(switchKey))
-        {
-            SwitchScene();
-        }
-    }
-
-    private void SwitchScene()
+    public void SwitchScene()
     {
         var currentScene = SceneManager.GetActiveScene().name;
 
