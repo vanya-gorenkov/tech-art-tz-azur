@@ -238,11 +238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 8928ad1f307da744a9ca4909eff39a2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.58
+      value: -10.03
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 8928ad1f307da744a9ca4909eff39a2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.96
+      value: -3.99
       objectReference: {fileID: 0}
     - target: {fileID: 5044508969012855415, guid: 8928ad1f307da744a9ca4909eff39a2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2060,11 +2060,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b01ee60e98083f4abe6d6d49676beb6, type: 3}
---- !u!1 &2845942079411374702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 993727917662579886, guid: 7b01ee60e98083f4abe6d6d49676beb6, type: 3}
-  m_PrefabInstance: {fileID: 2845942079411374701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2845942079411374703 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6362896793298935656, guid: 7b01ee60e98083f4abe6d6d49676beb6, type: 3}
@@ -2245,7 +2240,7 @@ PrefabInstance:
     - target: {fileID: 3192621530141076542, guid: 7a76676438cb8134eb7d94002b9522b2, type: 3}
       propertyPath: objectsToToggle.Array.data[19]
       value: 
-      objectReference: {fileID: 2845942079411374702}
+      objectReference: {fileID: 0}
     - target: {fileID: 3192621530249469001, guid: 7a76676438cb8134eb7d94002b9522b2, type: 3}
       propertyPath: m_Name
       value: UI

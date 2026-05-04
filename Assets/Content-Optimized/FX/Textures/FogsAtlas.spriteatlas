@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpiderAtlas
+  m_Name: FogsAtlas
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -40,22 +40,31 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
-      enableAlphaDilation: 0
+      enableAlphaDilation: 1
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 9535c02738b53b54e8fcd7173658ade2, type: 3}
-    - {fileID: 2800000, guid: 1ec372d45e9cd324a829be3e6d5d1c2b, type: 3}
+    - {fileID: 2800000, guid: 7080309565f2c21498381d7f6d973504, type: 3}
+    - {fileID: 2800000, guid: bf9ccb5fd0e25624c8a703dcdcba3168, type: 3}
+    - {fileID: 2800000, guid: 825a05c0fbc88cb48ba3619449eafd8c, type: 3}
+    - {fileID: 2800000, guid: 3889c40213c1e8a419ef99508410e82e, type: 3}
+    - {fileID: 2800000, guid: 664483319163174498a6e1f8a4829e6f, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 1ec372d45e9cd324a829be3e6d5d1c2b, type: 3}
-  - {fileID: 21300000, guid: 9535c02738b53b54e8fcd7173658ade2, type: 3}
+  - {fileID: 21300000, guid: 825a05c0fbc88cb48ba3619449eafd8c, type: 3}
+  - {fileID: 21300000, guid: 664483319163174498a6e1f8a4829e6f, type: 3}
+  - {fileID: 21300000, guid: 3889c40213c1e8a419ef99508410e82e, type: 3}
+  - {fileID: 21300000, guid: 7080309565f2c21498381d7f6d973504, type: 3}
+  - {fileID: 21300000, guid: bf9ccb5fd0e25624c8a703dcdcba3168, type: 3}
   m_PackedSpriteNamesToIndex:
-  - SpiderLegs
-  - SpiderBody
+  - Fog4
+  - Fog1
+  - Fog5
+  - Fog2
+  - Fog3
   m_RenderDataMap: {}
-  m_Tag: SpiderAtlas
+  m_Tag: FogsAtlas
   m_IsVariant: 0

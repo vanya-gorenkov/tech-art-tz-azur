@@ -50,6 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3192621528982625634}
   - component: {fileID: 4594530615010866577}
+  - component: {fileID: 3508139718533115992}
   m_Layer: 5
   m_Name: TapToStartPanel
   m_TagString: Untagged
@@ -87,6 +88,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3192621528982625635}
   m_CullTransparentMesh: 1
+--- !u!95 &3508139718533115992
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192621528982625635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d6ac2d6d0347424fbd5261e35a5593e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3192621529480658701
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +158,7 @@ GameObject:
   - component: {fileID: 3192621529694592810}
   - component: {fileID: 3192621529694592808}
   - component: {fileID: 3192621529694592809}
+  - component: {fileID: 1374270206319422446}
   m_Layer: 5
   m_Name: TapText
   m_TagString: Untagged
@@ -153,7 +176,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3192621528982625634}
   m_RootOrder: 0
@@ -205,10 +228,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 1, g: 0.4713462, b: 0, a: 1}
-    topRight: {r: 1, g: 0.4713462, b: 0, a: 1}
-    bottomLeft: {r: 0.9827944, g: 1, b: 0, a: 1}
-    bottomRight: {r: 0.9827944, g: 1, b: 0, a: 1}
+    topLeft: {r: 0.9843137, g: 1, b: 0, a: 1}
+    topRight: {r: 0.9843137, g: 1, b: 0, a: 1}
+    bottomLeft: {r: 1, g: 0.5291462, b: 0.042452812, a: 1}
+    bottomRight: {r: 1, g: 0.5291462, b: 0.042452812, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -260,6 +283,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1374270206319422446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192621529694592811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7bd7e1775b077418a39e11d12caf70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radius: 1000
+  m_extraLineSpace: 0
+  m_centerTextAlignToArc: 1
+  m_centerAlignToLargeCaps: 1
 --- !u!1 &3192621530249469001
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +414,7 @@ GameObject:
   - component: {fileID: 3192621530822554411}
   - component: {fileID: 3192621530822554420}
   m_Layer: 5
-  m_Name: Cursor
+  m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,9 +1267,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6253513266284563947}
-  - component: {fileID: 3390471140470920077}
   m_Layer: 5
-  m_Name: CursorAnimation
+  m_Name: TapHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,27 +1296,6 @@ RectTransform:
   m_AnchoredPosition: {x: 102, y: -105}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &3390471140470920077
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6600499140960331771}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d6ac2d6d0347424fbd5261e35a5593e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7889362775200863486
 GameObject:
   m_ObjectHideFlags: 0

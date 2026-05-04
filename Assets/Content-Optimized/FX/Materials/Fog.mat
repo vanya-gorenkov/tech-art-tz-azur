@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 2c7a4e48f36d03f49ab48c99d29e207b, type: 3}
+        m_Texture: {fileID: 2800000, guid: efbda751a19206e44821d192048c44d5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -35,8 +35,8 @@ Material:
     - _Density: 1.5
     - _Distortion: 0.11
     - _Rotation: 0
-    - _Scale: 0.25
-    - _Speed: 0.04
+    - _Scale: 0.2
+    - _Speed: 0.02
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
