@@ -1,9 +1,16 @@
-Shader "_Project/SpriteDepthWrite"
+Shader "_Project/SpriteCutoutDepthWrite"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
+        _Cutoff ("Alpha Cutoff", Range(0,1)) = 0.5
+        [MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
+        [HideInInspector] _RendererColor ("RendererColor", Color) = (1,1,1,1)
+        [HideInInspector] _Flip ("Flip", Vector) = (1,1,1,1)
+        [PerRendererData] _AlphaTex ("External Alpha", 2D) = "white" {}
+        [PerRendererData] _EnableExternalAlpha ("Enable External Alpha", Float) = 0
+        [Toggle] _ZWrite ("ZWrite", Float) = 0
     }
 
     SubShader
@@ -11,64 +18,39 @@ Shader "_Project/SpriteDepthWrite"
         Tags
         {
             "Queue"="Transparent"
-            "RenderType"="Transparent"
             "IgnoreProjector"="True"
+            "RenderType"="TransparentCutout"
+            "PreviewType"="Plane"
             "CanUseSpriteAtlas"="True"
         }
 
         Cull Off
         Lighting Off
-
-        ZWrite On
-        ZTest LEqual
-
-        Blend SrcAlpha OneMinusSrcAlpha
+        ZWrite [_ZWrite]
+        Blend Off
 
         Pass
         {
-            CGPROGRAM
-            #pragma vertex vert
+        CGPROGRAM
+            #pragma vertex SpriteVert
             #pragma fragment frag
-            #include "UnityCG.cginc"
+            #pragma target 2.0
+            #pragma multi_compile_instancing
+            #pragma multi_compile_local _ PIXELSNAP_ON
+            #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
 
-            struct appdata
+            #include "UnitySprites.cginc"
+
+            float _Cutoff;
+
+            fixed4 frag(v2f IN) : SV_Target
             {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-                float4 color : COLOR;
-            };
-
-            struct v2f
-            {
-                float2 uv : TEXCOORD0;
-                float4 vertex : SV_POSITION;
-                float4 color : COLOR;
-            };
-
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            float4 _Color;
-
-            v2f vert (appdata v)
-            {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                o.color = v.color * _Color;
-                return o;
+                fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
+                clip(c.a - _Cutoff);
+                return c;
             }
 
-            fixed4 frag (v2f i) : SV_Target
-            {
-                fixed4 col = tex2D(_MainTex, i.uv) * i.color;
-
-                // альфа-клип (важно при ZWrite On для спрайтов)
-                clip(col.a - 0.01);
-
-                return col;
-            }
-
-            ENDCG
+        ENDCG
         }
     }
 }
