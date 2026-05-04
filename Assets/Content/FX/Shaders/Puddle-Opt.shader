@@ -3,13 +3,14 @@ Shader "_Project/Puddle-Opt"
     Properties
     {
         _MainTex ("Mask", 2D) = "white" {}
-        _NoiseTex ("Noise", 2D) = "gray" {}
+        _CausticsTex ("Caustics", 2D) = "white" {}
 
-        _Color ("Water Color", Color) = (0.2,0.3,0.35,0.6)
+        _Speed ("Speed", Float) = 0.25
+        _CausticsScale ("Caustics Scale", Float) = 1.0
 
-        _Speed ("Speed", Float) = 0.3
-        _SpecIntensity ("Spec", Range(0,2)) = 0.7
-        _SpecPower ("Spec Power", Range(1,30)) = 15
+        _Dir ("Direction", Float) = 0
+
+        _Spec ("Spec Strength", Range(0,2)) = 0.8
     }
 
     SubShader
@@ -18,10 +19,13 @@ Shader "_Project/Puddle-Opt"
         {
             "Queue"="Transparent"
             "RenderType"="Transparent"
+            "CanUseSpriteAtlas"="True"
         }
 
         ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
+        Cull Off
+        Lighting Off
 
         Pass
         {
@@ -31,23 +35,25 @@ Shader "_Project/Puddle-Opt"
             #include "UnityCG.cginc"
 
             sampler2D _MainTex;
-            sampler2D _NoiseTex;
+            sampler2D _CausticsTex;
 
-            float4 _Color;
             float _Speed;
-            float _SpecIntensity;
-            float _SpecPower;
+            float _CausticsScale;
+            float _Dir;
+            float _Spec;
 
             struct appdata
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
+                float4 color  : COLOR;
+                float2 uv     : TEXCOORD0;
             };
 
             struct v2f
             {
-                float4 pos : SV_POSITION;
-                float2 uv : TEXCOORD0;
+                float4 pos   : SV_POSITION;
+                float4 color : COLOR;
+                float2 uv    : TEXCOORD0;
             };
 
             v2f vert (appdata v)
@@ -55,6 +61,7 @@ Shader "_Project/Puddle-Opt"
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
+                o.color = v.color;
                 return o;
             }
 
@@ -62,22 +69,33 @@ Shader "_Project/Puddle-Opt"
             {
                 float t = _Time.y * _Speed;
 
-                float2 n = (
-                    tex2D(_NoiseTex, i.uv + float2(t, t*0.5)).rg +
-                    tex2D(_NoiseTex, i.uv - float2(t*0.7, t)).rg
-                ) * 0.5;
+                float s = sin(_Dir);
+                float c = cos(_Dir);
+                float2 dir = float2(c, s);
+
+                float2 cuv = i.uv * _CausticsScale + dir * t;
+
+                float caustics = tex2D(_CausticsTex, cuv).r;
 
                 float mask = tex2D(_MainTex, i.uv).a;
 
-                float3 col = _Color.rgb;
+                float wave = sin(i.uv.x * 8.0 + t * 1.8);
+                wave = wave * 0.5 + 0.5;
 
-                float spec = abs(n.r - 0.5) * 2;
+                float spec = caustics * wave;
+
                 spec = spec * spec;
-                col += spec * _SpecIntensity;
 
-                col *= lerp(1.0, 0.85, mask);
+                float3 col = i.color.rgb;
 
-                return float4(col, mask * _Color.a);
+                col += spec * _Spec;
+                col += caustics * 0.06;
+
+                col *= 1.0 - mask * 0.15;
+
+                float alpha = mask * i.color.a;
+
+                return float4(col, alpha);
             }
             ENDCG
         }

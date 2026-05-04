@@ -36,13 +36,13 @@ Material:
     m_Floats:
     - _EdgeIntensity: 0
     - _FresnelPower: 1
-    - _SpecIntensity: 0.881
-    - _SpecPower: 5
-    - _Speed: 0.04
-    - _Strength: 0.02
+    - _SpecIntensity: 1
+    - _SpecPower: 4
+    - _Speed: 0.03
+    - _Strength: 0.01
     - _Tiling: 2
     m_Colors:
     - _Color: {r: 0.2, g: 0.3, b: 0.35, a: 0.6}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.5683072, g: 0.9339623, b: 0.75047255, a: 1}
+    - _Tint: {r: 0, g: 1, b: 0.015686274, a: 0.5019608}
   m_BuildTextureStacks: []
