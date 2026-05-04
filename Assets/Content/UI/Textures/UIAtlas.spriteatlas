@@ -20,7 +20,19 @@ SpriteAtlas:
       readable: 0
       crunchedCompression: 0
       sRGB: 1
-    platformSettings: []
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: WebGL
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
       padding: 4
@@ -35,6 +47,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 9f2109a5fb7f6cb4a813152cac59fca1, type: 3}
     - {fileID: 2800000, guid: 710a2c4bdd8f6e142942bcc6481fd528, type: 3}
     - {fileID: 2800000, guid: 5ad12499c68e0db4cafe4988fc49c325, type: 3}
+    - {fileID: 2800000, guid: ff36607f5d08a5b47ba4a268752ffb14, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -43,10 +56,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9f2109a5fb7f6cb4a813152cac59fca1, type: 3}
   - {fileID: 21300000, guid: 5ad12499c68e0db4cafe4988fc49c325, type: 3}
   - {fileID: 21300000, guid: 710a2c4bdd8f6e142942bcc6481fd528, type: 3}
+  - {fileID: 21300000, guid: ff36607f5d08a5b47ba4a268752ffb14, type: 3}
   m_PackedSpriteNamesToIndex:
   - Heart
   - Hand
   - Coin
+  - CircleTap
   m_RenderDataMap: {}
   m_Tag: UIAtlas
   m_IsVariant: 0
