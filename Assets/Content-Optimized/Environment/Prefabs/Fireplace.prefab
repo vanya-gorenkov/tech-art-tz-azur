@@ -106,7 +106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5307999930902569499, guid: ff57efbdf16956d4682296db86f8815c, type: 3}
       propertyPath: m_Name
-      value: FX_Fire-Opt
+      value: FX_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 5307999930902569500, guid: ff57efbdf16956d4682296db86f8815c, type: 3}
       propertyPath: m_RootOrder

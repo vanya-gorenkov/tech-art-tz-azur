@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6936905481506264475, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
       propertyPath: m_Name
-      value: FX_Puddle-Opt
+      value: FX_Puddle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}

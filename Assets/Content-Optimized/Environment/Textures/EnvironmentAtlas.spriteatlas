@@ -65,7 +65,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 81bbbc1edd5989747a161e2d2765fd9b, type: 3}
   - {fileID: 21300000, guid: 2d4c5dee6a786474ab86e24f40da1856, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Door2_Arch 1
+  - Door2_Arch
   - "\u0421\u043B\u043E\u0439 2"
   - "\u0421\u043B\u043E\u0439 3"
   - "\u0421\u043B\u043E\u0439 1"
@@ -77,12 +77,12 @@ SpriteAtlas:
   - "\u0421\u043B\u043E\u0439 9"
   - "\u0421\u043B\u043E\u0439 10"
   - Ladder
-  - Door3_Arch 1
-  - Barrels 1
-  - Door1_Closed 1
-  - Fireplace 1
-  - Door1_Open 1
-  - Door1_Arch 1
+  - Door3_Arch
+  - Barrels
+  - Door1_Closed
+  - Fireplace
+  - Door1_Open
+  - Door1_Arch
   m_RenderDataMap: {}
-  m_Tag: EnvAtlas
+  m_Tag: EnvironmentAtlas
   m_IsVariant: 0
