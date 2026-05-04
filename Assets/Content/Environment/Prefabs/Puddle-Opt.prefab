@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1411722861089537657}
   - component: {fileID: 7816088594433453593}
-  - component: {fileID: 7213888279506870823}
   m_Layer: 0
   m_Name: Puddle-Opt
   m_TagString: Untagged
@@ -45,21 +44,6 @@ SortingGroup:
   m_SortingLayerID: 384738727
   m_SortingLayer: -2
   m_SortingOrder: -100
---- !u!114 &7213888279506870823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2433270174500595764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5a14d20c19ed6c429303e51a8cb1a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pivot: {x: 0, y: 1}
-  height: 0
-  syncZ: 1
 --- !u!1001 &5384914638715311439
 PrefabInstance:
   m_ObjectHideFlags: 0

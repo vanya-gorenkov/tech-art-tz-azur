@@ -23,6 +23,7 @@ Shader "Custom/Fog"
         Cull Off
         Lighting Off
         ZWrite Off
+        ZTest LEqual
 
         Pass
         {

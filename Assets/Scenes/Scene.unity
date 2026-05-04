@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneA: Scene
   sceneB: Scene-Optimized
-  switchKey: 32
+  switchKey: 323
 --- !u!4 &832722211
 Transform:
   m_ObjectHideFlags: 0
@@ -1341,7 +1341,7 @@ Camera:
   far clip plane: 60
   field of view: 60
   orthographic: 1
-  orthographic size: 20.444445
+  orthographic size: 16.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
