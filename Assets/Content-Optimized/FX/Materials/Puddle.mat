@@ -38,12 +38,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CausticsScale: 1
+    - _CausticsBoost: 1.06
+    - _CausticsScale: 0.8
     - _CausticsSpeed: 0.01
     - _Dir: 0
     - _EdgeIntensity: 0
+    - _FlowDir: 1
+    - _FlowSpeed: 0.06
     - _FresnelPower: 1
-    - _Spec: 2
+    - _Intensity: 0.27
+    - _Spec: 1.74
     - _SpecIntensity: 1
     - _SpecPower: 2.53
     - _Speed: 0.02
@@ -52,6 +56,7 @@ Material:
     m_Colors:
     - _CausticsDir: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 0.16286935, g: 0.5660378, b: 0.38685182, a: 0.7058824}
+    - _DirVec: {r: 1, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 0.5683072, g: 0.9339623, b: 0.75047255, a: 1}
   m_BuildTextureStacks: []

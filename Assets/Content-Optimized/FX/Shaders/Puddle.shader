@@ -5,12 +5,12 @@ Shader "_Project/Puddle-NoGrab"
         _MainTex ("Mask", 2D) = "white" {}
         _CausticsTex ("Caustics", 2D) = "white" {}
 
-        _Speed ("Speed", Float) = 0.25
-        _CausticsScale ("Caustics Scale", Float) = 1.0
+        _Speed ("Speed", Range(0,2)) = 0.3
+        _Dir ("Direction", Range(0,6.2831)) = 0
 
-        _Dir ("Direction", Float) = 0
+        _CausticsScale ("Caustics Scale", Range(0.1,5)) = 1.0
 
-        _Spec ("Spec Strength", Range(0,2)) = 0.8
+        _Intensity ("Intensity", Range(0,2)) = 1.0
     }
 
     SubShader
@@ -19,7 +19,6 @@ Shader "_Project/Puddle-NoGrab"
         {
             "Queue"="Transparent"
             "RenderType"="Transparent"
-            "CanUseSpriteAtlas"="True"
         }
 
         ZWrite Off
@@ -37,23 +36,24 @@ Shader "_Project/Puddle-NoGrab"
             sampler2D _MainTex;
             sampler2D _CausticsTex;
 
-            float _Speed;
-            float _CausticsScale;
-            float _Dir;
-            float _Spec;
+            half _Speed;
+            half _Dir;
+            half _CausticsScale;
+            half _Intensity;
 
             struct appdata
             {
                 float4 vertex : POSITION;
-                float4 color  : COLOR;
-                float2 uv     : TEXCOORD0;
+                half4 color   : COLOR;
+                half2 uv      : TEXCOORD0;
             };
 
             struct v2f
             {
                 float4 pos   : SV_POSITION;
-                float4 color : COLOR;
-                float2 uv    : TEXCOORD0;
+                half4 color  : COLOR;
+                half2 uv     : TEXCOORD0;
+                half2 dir    : TEXCOORD1;
             };
 
             v2f vert (appdata v)
@@ -62,40 +62,41 @@ Shader "_Project/Puddle-NoGrab"
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 o.color = v.color;
+
+                half s = sin(_Dir);
+                half c = cos(_Dir);
+                o.dir = half2(c, s);
+
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                float t = _Time.y * _Speed;
+                half t = _Time.y * _Speed;
 
-                float s = sin(_Dir);
-                float c = cos(_Dir);
-                float2 dir = float2(c, s);
+                half2 cuv = i.uv * _CausticsScale + i.dir * t;
 
-                float2 cuv = i.uv * _CausticsScale + dir * t;
+                half caustics = tex2D(_CausticsTex, cuv).r;
+                half mask = tex2D(_MainTex, i.uv).a;
 
-                float caustics = tex2D(_CausticsTex, cuv).r;
+                half wave = frac(i.uv.x * 6.0h + t * 1.2h);
+                wave = wave * (1.0h - wave) * 2.0h;
 
-                float mask = tex2D(_MainTex, i.uv).a;
+                half energy = caustics * _Intensity;
 
-                float wave = sin(i.uv.x * 8.0 + t * 1.8);
-                wave = wave * 0.5 + 0.5;
+                half base = energy * 0.5h;
+                half spec = energy * wave;
 
-                float spec = caustics * wave;
+                half3 col = i.color.rgb;
 
-                spec = spec * spec;
+                col += base;
+                col += spec;
 
-                float3 col = i.color.rgb;
+                col *= (1.0h - mask * 0.12h);
 
-                col += spec * _Spec;
-                col += caustics * 0.06;
+                half alpha = mask * i.color.a;
 
-                col *= 1.0 - mask * 0.15;
-
-                float alpha = mask * i.color.a;
-
-                return float4(col, alpha);
+                return half4(col, alpha);
             }
             ENDCG
         }

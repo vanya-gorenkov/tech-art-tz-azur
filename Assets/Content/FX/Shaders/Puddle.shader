@@ -12,9 +12,6 @@ Shader "_Project/Puddle"
 
         _SpecIntensity ("Spec Intensity", Range(0,2)) = 0.7
         _SpecPower ("Spec Power", Range(1,50)) = 25
-
-        _FresnelPower ("Fresnel Power", Range(1,8)) = 4
-        _EdgeIntensity ("Edge Intensity", Range(0,2)) = 1.0
     }
 
     SubShader
@@ -31,28 +28,29 @@ Shader "_Project/Puddle"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 2.0
+
             #include "UnityCG.cginc"
 
             sampler2D _MainTex;
             sampler2D _NoiseTex;
             sampler2D _GrabTexture;
 
-            float _Strength, _Speed;
-            float4 _Tint;
+            half _Strength, _Speed;
+            fixed4 _Tint;
 
-            float _SpecIntensity, _SpecPower;
-            float _FresnelPower, _EdgeIntensity;
+            half _SpecIntensity, _SpecPower;
 
             struct appdata
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
+                half2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
                 float4 pos : SV_POSITION;
-                float2 uv : TEXCOORD0;
+                half2 uv : TEXCOORD0;
                 float4 grabUV : TEXCOORD1;
             };
 
@@ -67,26 +65,33 @@ Shader "_Project/Puddle"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                float t = _Time.y * _Speed;
+                half t = _Time.y * _Speed;
 
-                float2 n = (
-                    tex2D(_NoiseTex, i.uv + float2(t, t * 0.5)).rg +
-                    tex2D(_NoiseTex, i.uv - float2(t * 0.7, t)).rg
-                ) * 0.5;
+                half2 n1 = tex2D(_NoiseTex, i.uv + half2(t, t * 0.5)).rg;
+                half2 n2 = tex2D(_NoiseTex, i.uv - half2(t * 0.7, t)).rg;
 
-                float2 screenUV = i.grabUV.xy / i.grabUV.w + (n * 2 - 1) * _Strength;
+                half2 n = (n1 + n2) * 0.5;
 
-                float4 col = tex2D(_GrabTexture, screenUV);
+                half2 distortion = (n * 2.0h - 1.0h) * _Strength;
 
-                float a = tex2D(_MainTex, i.uv).a;
+                half2 screenUV = i.grabUV.xy / i.grabUV.w + distortion;
 
-                col.rgb *= lerp(1.0, 0.85, smoothstep(0.0, 0.5, a));
+                fixed4 col = tex2D(_GrabTexture, screenUV);
+
+                half a = tex2D(_MainTex, i.uv).a;
+
+                half edge = saturate(a * 2.0h);
+                col.rgb *= lerp(0.85h, 1.0h, edge);
+
                 col.rgb = lerp(col.rgb, col.rgb * _Tint.rgb, _Tint.a);
 
-                float spec = pow(abs(n.r - 0.5) * 2, _SpecPower);
-                col.rgb += spec * _SpecIntensity;
+                half specBase = abs(n.r - 0.5h) * 2.0h;
 
-                col.rgb += pow(1.0 - a, _FresnelPower) * _EdgeIntensity;
+                half spec = specBase * specBase;
+                spec *= spec;
+                spec = lerp(spec, pow(specBase, _SpecPower), step(4.0h, _SpecPower));
+
+                col.rgb += spec * _SpecIntensity;
 
                 col.a = a;
                 return col;

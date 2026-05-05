@@ -40,7 +40,7 @@ SortingGroup:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2433270174500595764}
-  m_Enabled: 1
+  m_Enabled: 0
   m_SortingLayerID: 384738727
   m_SortingLayer: -2
   m_SortingOrder: -100
@@ -51,6 +51,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1411722861089537657}
     m_Modifications:
+    - target: {fileID: 5048678461402691945, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048678461402691945, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 384738727
+      objectReference: {fileID: 0}
     - target: {fileID: 6936905481506264452, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -94,6 +102,14 @@ PrefabInstance:
     - target: {fileID: 6936905481506264452, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6936905481506264453, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6936905481506264453, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 384738727
       objectReference: {fileID: 0}
     - target: {fileID: 6936905481506264475, guid: fc4993f824f43d647826ccf4828a65e3, type: 3}
       propertyPath: m_Name

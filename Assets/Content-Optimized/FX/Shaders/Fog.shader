@@ -30,30 +30,36 @@ Shader "_Project/Fog"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 2.0
 
             #include "UnityCG.cginc"
 
             sampler2D _MainTex;
             sampler2D _NoiseTex;
 
-            float _Speed;
-            float _Scale;
-            float _Rotation;
-            float _Density;
+            half _Speed;
+            half _Scale;
+            half _Rotation;
+            half _Density;
+
+            half2 GetRotation()
+            {
+                return half2(sin(_Rotation), cos(_Rotation));
+            }
 
             struct appdata_t
             {
                 float4 vertex   : POSITION;
-                float4 color    : COLOR;
-                float2 texcoord : TEXCOORD0;
+                fixed4 color    : COLOR;
+                half2 texcoord  : TEXCOORD0;
             };
 
             struct v2f
             {
                 float4 vertex   : SV_POSITION;
-                float4 color    : COLOR;
-                float2 uv       : TEXCOORD0;
-                float2 noiseUV  : TEXCOORD1;
+                fixed4 color    : COLOR;
+                half2 uv        : TEXCOORD0;
+                half2 noiseUV   : TEXCOORD1;
             };
 
             v2f vert (appdata_t v)
@@ -62,17 +68,14 @@ Shader "_Project/Fog"
 
                 float4 world = mul(unity_ObjectToWorld, v.vertex);
 
-                float s = sin(_Rotation);
-                float c = cos(_Rotation);
+                half2 sc = GetRotation();
 
-                float2 uv = world.xy * _Scale;
+                half2 uv = world.xy * _Scale;
 
-                float2 rotated = float2(
-                    uv.x * c - uv.y * s,
-                    uv.x * s + uv.y * c
+                o.noiseUV = half2(
+                    uv.x * sc.y - uv.y * sc.x,
+                    uv.x * sc.x + uv.y * sc.y
                 );
-
-                o.noiseUV = rotated;
 
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv     = v.texcoord;
@@ -83,25 +86,24 @@ Shader "_Project/Fog"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                float t = _Time.y * _Speed;
+                half t = _Time.y * _Speed;
 
-                float2 uv = i.noiseUV;
+                half2 uv = i.noiseUV;
                 uv.y += t;
 
-                float n1 = tex2D(_NoiseTex, uv).r;
-                float n2 = tex2D(_NoiseTex, uv * 1.5 + t * 0.3).r;
+                half n1 = tex2D(_NoiseTex, uv).r;
+                half n2 = tex2D(_NoiseTex, uv * 1.5 + t * 0.3).r;
 
-                float density = n1 * n2 * _Density;
+                half density = n1 * n2 * _Density;
 
-                float mask = tex2D(_MainTex, i.uv).a;
+                half mask = tex2D(_MainTex, i.uv).a;
 
-                float fadeIn  = smoothstep(0.0, 0.2, i.uv.y);
-                float fadeOut = 1.0 - smoothstep(0.6, 1.0, i.uv.y);
-                float fade = fadeIn * fadeOut;
+                half fade = smoothstep(0.0, 0.2, i.uv.y) *
+                            (1.0 - smoothstep(0.6, 1.0, i.uv.y));
 
-                float alpha = density * fade * mask * i.color.a;
+                half alpha = density * fade * mask * i.color.a;
 
-                return float4(i.color.rgb, alpha);
+                return fixed4(i.color.rgb, alpha);
             }
             ENDCG
         }
