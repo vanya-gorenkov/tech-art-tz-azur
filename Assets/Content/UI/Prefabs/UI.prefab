@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7bd7e1775b077418a39e11d12caf70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radius: 1000
+  m_radius: 2000
   m_extraLineSpace: 0
   m_centerTextAlignToArc: 1
   m_centerAlignToLargeCaps: 1
