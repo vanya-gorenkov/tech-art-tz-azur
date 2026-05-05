@@ -46,7 +46,7 @@ Material:
     - _FlowDir: 1
     - _FlowSpeed: 0.06
     - _FresnelPower: 1
-    - _Intensity: 0.27
+    - _Intensity: 0.5
     - _Spec: 1.74
     - _SpecIntensity: 1
     - _SpecPower: 2.53
